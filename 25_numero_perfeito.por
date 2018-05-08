@@ -3,14 +3,21 @@ programa
 	funcao inicio()
 	{
 		inteiro numero, acumulador = 0
-		
-		para (inteiro i = 0; i < 5; i++){
-			escreva("Informe um número: ")
-			leia(numero)
-			acumulador = acumulador + numero
+
+		escreva("Informe um número inteiro: \n")
+		leia(numero)
+
+		para (inteiro i = 1; i < numero; i++){
+			se (numero % i == 0){
+				acumulador = acumulador + i
+			}
 		}
-		
-		escreva("A média dos 5 números informados é: " + (acumulador / 5))		
+
+		se (acumulador == numero){
+			escreva("O número " + numero + " é um número perfeito!")
+		} senao {
+			escreva("O número " + numero + " não é um número perfeito!")
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +25,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 63; 
+ * @POSICAO-CURSOR = 221; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

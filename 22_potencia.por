@@ -2,15 +2,19 @@ programa
 {
 	funcao inicio()
 	{
-		inteiro numero, acumulador = 0
-		
-		para (inteiro i = 0; i < 5; i++){
-			escreva("Informe um número: ")
-			leia(numero)
-			acumulador = acumulador + numero
+		inteiro x, y, potencia
+
+		escreva("Informe x: ")
+		leia(x)
+		escreva("Informe y: ")
+		leia(y)
+
+		potencia = x
+		para (inteiro i = 1; i < y; i++){
+			potencia = potencia * x
 		}
-		
-		escreva("A média dos 5 números informados é: " + (acumulador / 5))		
+
+		escreva("x elevado a y é " + potencia)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +22,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 63; 
+ * @POSICAO-CURSOR = 81; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

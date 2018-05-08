@@ -2,15 +2,23 @@ programa
 {
 	funcao inicio()
 	{
-		inteiro numero, acumulador = 0
-		
-		para (inteiro i = 0; i < 5; i++){
-			escreva("Informe um número: ")
-			leia(numero)
-			acumulador = acumulador + numero
+		inteiro numero, contador = 0
+
+		escreva("Informe um número inteiro e positivo: \n")
+		leia(numero)
+
+		para (inteiro i = numero; i > 1; i--){
+			se (numero % i == 0){
+				escreva("Número é divisível por " + i + "\n")
+				contador++
+			}
 		}
 		
-		escreva("A média dos 5 números informados é: " + (acumulador / 5))		
+		se (contador == 1){
+			escreva("O número " + numero + " é primo!")
+		} senao {
+			escreva("O número " + numero + " não é primo!")
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +26,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 63; 
+ * @POSICAO-CURSOR = 275; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

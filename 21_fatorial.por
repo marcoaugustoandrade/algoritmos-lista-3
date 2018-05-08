@@ -2,15 +2,16 @@ programa
 {
 	funcao inicio()
 	{
-		inteiro numero, acumulador = 0
-		
-		para (inteiro i = 0; i < 5; i++){
-			escreva("Informe um número: ")
-			leia(numero)
-			acumulador = acumulador + numero
+		inteiro n, fat = 1
+
+		escreva("Informe um número inteiro e positivo para o cálculo do seu fatorial: \n")
+		leia(n)
+
+		para (inteiro i = 1; i <= n; i++){
+			fat = fat * i
 		}
-		
-		escreva("A média dos 5 números informados é: " + (acumulador / 5))		
+
+		escreva("O fatorial de " + n + " é " + fat)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +19,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 63; 
+ * @POSICAO-CURSOR = 249; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
